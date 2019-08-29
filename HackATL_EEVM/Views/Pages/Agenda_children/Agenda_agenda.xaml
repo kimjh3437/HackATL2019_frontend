@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Agenda_agenda"
+             xmlns:agenda="clr-namespace:HackATL_EEVM.Views.Pages.Agenda_children.Agenda_childrenDays"
+            NavigationPage.HasNavigationBar="False">
+    
+  <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <NavigationPage Title="PRE">
+            <x:Arguments>
+                <agenda:Agenda_agendaPRE/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="FRI">
+            <x:Arguments>
+                <agenda:Agenda_agendaFRI/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="SAT">
+            <x:Arguments>
+                <agenda:Agenda_agendaSAT/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="SUN">
+            <x:Arguments>
+                <agenda:Agenda_agendaSUN/>
+            </x:Arguments>
+        </NavigationPage>
+
+        
+               
+    </TabbedPage.Children>
+</TabbedPage>

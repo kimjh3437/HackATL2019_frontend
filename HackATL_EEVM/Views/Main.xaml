@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:local="clr-namespace:HackATL_EEVM"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Main" 
+            
+             
+             BarTextColor="Black"
+             NavigationPage.HasNavigationBar="False">
+
+    <TabbedPage.Effects>
+        <local:NoShiftEffects />
+    </TabbedPage.Effects>
+
+    <!--Pages can be added as references or inline-->
+
+    <NavigationPage Title="Home" NavigationPage.HasNavigationBar="False" BarTextColor="Black">
+        <x:Arguments>
+            <local:Home/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Agenda" BarTextColor="Black" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:Agenda/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Pitch" BarTextColor="Black" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:Pitch/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Map" BarTextColor="Black" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:Map/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="FAQ" BarTextColor="Black" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:FAQ/>
+        </x:Arguments>
+    </NavigationPage>
+    
+
+</TabbedPage>
+    
+    
+
+    
+
+
