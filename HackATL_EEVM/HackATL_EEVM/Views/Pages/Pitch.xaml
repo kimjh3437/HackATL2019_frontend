@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Pitch"
+             xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
+             BackgroundColor="White">
+   
+
+    <ContentPage.BindingContext>
+        <viewmodel:AboutViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding OpenWebCommand_FB}" Icon="Facebook.png"/>
+        
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Margin="25" Orientation="Vertical">
+            <StackLayout Spacing="20" Orientation="Vertical">
+                <StackLayout>
+                    <Image Source="Banner.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BackgroundColor="White"/>
+                </StackLayout>
+                <StackLayout Spacing="30" Orientation="Vertical">
+                    <ImageButton Source="rubric.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BorderColor="Transparent" BackgroundColor="White"/>
+
+                    <ImageButton Source="teaminfo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BorderColor="Transparent" BackgroundColor="White"/>
+
+                    <ImageButton Source="pitchdeck.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BorderColor="Transparent" BackgroundColor="White"/>
+
+                    <ImageButton Source="pitchtime.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BorderColor="Transparent" BackgroundColor="White"/>
+
+                    <ImageButton Source="liveresult.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" BorderColor="Transparent" BackgroundColor="White"/>
+                </StackLayout>
+
+                
+
+                
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

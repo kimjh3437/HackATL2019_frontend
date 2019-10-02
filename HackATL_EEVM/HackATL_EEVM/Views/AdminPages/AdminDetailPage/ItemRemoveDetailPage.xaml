@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Views.AdminPages.AdminDetailPage.ItemRemoveDetailPage">
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20" Padding="15">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Event name" FontSize="Medium" />
+                <Label Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Description:" FontSize="Medium" />
+                <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Time" FontSize="Medium"/>
+                <Label Text="{Binding Item.Time}" d:Text="Item time" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Location" FontSize="Medium"/>
+                <Label Text="{Binding Item.Location}" d:Text="Item location" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Type" FontSize="Medium"/>
+                <Label Text="{Binding Item.Type}" d:Text="Item type" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Day" FontSize="Medium"/>
+                <Label Text="{Binding Item.Day}" d:Text="Item day" FontSize="Small"/>
+            </StackLayout>
+            <Button Text="Delete this agenda event from the list" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

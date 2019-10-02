@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.FAQ"
+             xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
+             >
+
+    <ContentPage.BindingContext>
+        <viewmodel:AboutViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="FB" Command="{Binding OpenWebCommand_FB}"/>
+    </ContentPage.ToolbarItems>
+   
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="35" Spacing="50" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+                <StackLayout Margin="20" Spacing="30">
+                    <Button Text="About HackATL" BackgroundColor="#8b7ab3" Clicked="Button_About"                                             
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="320" HeightRequest="110" 
+                    />
+                    <Button Text="General Questions" BackgroundColor="#A48FD4" Clicked="Button_General"                                           
+                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="320" HeightRequest="110"
+                    />
+                </StackLayout>
+                <StackLayout Margin="20" Spacing="30">
+                    <Button Text="Question Board" BackgroundColor="#8cccec" Clicked="Button_Question"                     
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="320" HeightRequest="110" 
+                    />
+                    <Button Text="Live Chat" BackgroundColor="#8CC0DA" Clicked="Button_Live"                                            
+                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="320" HeightRequest="110"
+                    />
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
