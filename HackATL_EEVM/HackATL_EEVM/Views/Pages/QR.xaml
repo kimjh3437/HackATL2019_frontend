@@ -11,7 +11,7 @@
         <viewmodel:AboutViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="FB" Command="{Binding OpenWebCommand_FB}" IconImageSource="FBlogo.png"/>
+        <ToolbarItem Command="{Binding OpenWebCommand_FB}" IconImageSource="FacebookIcon.png"/>
     </ContentPage.ToolbarItems>
 
 

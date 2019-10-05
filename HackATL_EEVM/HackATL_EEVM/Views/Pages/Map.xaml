@@ -14,7 +14,7 @@
         <viewmodel:AboutViewModel/>
     </TabbedPage.BindingContext>
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="FB" Command="{Binding OpenWebCommand_FB}"/>
+        <ToolbarItem IconImageSource="FacebookIcon.png" Command="{Binding OpenWebCommand_FB}"/>
     </TabbedPage.ToolbarItems>
     <!--Pages can be added as references or inline-->
 

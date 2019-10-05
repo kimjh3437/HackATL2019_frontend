@@ -18,17 +18,17 @@
     </TabbedPage.BindingContext>
 
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Text="FB" Command="{Binding OpenWebCommand_FB}"/>
+        <ToolbarItem IconImageSource="FacebookIcon.png" Command="{Binding OpenWebCommand_FB}"/>
     </TabbedPage.ToolbarItems>
 
     <TabbedPage.Children>
-        <NavigationPage Icon="AgendaDeselected.png" >
+        <NavigationPage Icon="AgendaNotSelected.png" >
             <x:Arguments>
                 <local:Agenda_agenda/>
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Icon="MyAgendaDeselected.png" >
+        <NavigationPage Icon="MyAgendaNotSelected.png" >
             <x:Arguments>
                 <local:Agenda_myagenda/>
             </x:Arguments>

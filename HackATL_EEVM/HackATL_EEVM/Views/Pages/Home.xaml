@@ -12,9 +12,9 @@
         <viewmodel:AboutViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="Profile.png" />
+        <ToolbarItem IconImageSource="ProfileIcon.png" />
         
-        <ToolbarItem Command="{Binding OpenWebCommand_FB}" IconImageSource="Facebook.png"/>
+        <ToolbarItem Command="{Binding OpenWebCommand_FB}" IconImageSource="FacebookIcon.png"/>
         
     </ContentPage.ToolbarItems>
     
@@ -28,7 +28,7 @@
 
                 </StackLayout>
                 <StackLayout>
-                    <Image Source="HackATLLogo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <Image Source="MainLogo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 </StackLayout>
 
             </StackLayout>

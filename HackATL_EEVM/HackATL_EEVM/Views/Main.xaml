@@ -20,31 +20,31 @@
 
     <!--Pages can be added as references or inline-->
 
-    <NavigationPage NavigationPage.HasNavigationBar="False" Icon="Home.png" Title="Home">
+    <NavigationPage NavigationPage.HasNavigationBar="False" Icon="HomeIcon.png" Title="Home">
         <x:Arguments>
             <local:Home/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="Agenda.png">
+    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="AgendaIcon.png">
         <x:Arguments>
             <local:Agenda/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="Pitch">
+    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="PitchIcon">
         <x:Arguments>
             <local:Pitch/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="Rooms">
+    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="MapIcon">
         <x:Arguments>
             <local:Map/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="FAQ.png">
+    <NavigationPage BarTextColor="Black" NavigationPage.HasNavigationBar="False" IconImageSource="FAQIcon.png">
         <x:Arguments>
             <local:FAQ/>
         </x:Arguments>
