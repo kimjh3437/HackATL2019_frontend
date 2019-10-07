@@ -12,6 +12,7 @@ using HackATL_EEVM.Helpers_token;
 using HackATL_EEVM.Views.Pages.FAQ_children;
 using HackATL_EEVM.Views.Pages.FAQ_children.Livechat;
 using HackATL_EEVM.Services.User_related;
+using HackATL_EEVM.Views.Pages.LoginInterface;
 
 namespace HackATL_EEVM
 {
@@ -65,11 +66,9 @@ namespace HackATL_EEVM
             //else if (!IsUserLoggedIn)
             //   MainPage = new NavigationPage(new HackATL_EEVM.Pages.LoginInterface.LoginPage());           
             //else
-            MainPage = new NavigationPage(new Main())
-            {
-                BarBackgroundColor = Color.White, 
-                BarTextColor = Color.Black          
-            };
+            //MainPage = new NavigationPage(new MainMasterDetail());
+            MainPage = new NavigationPage(new LoginFirst());
+            
             //Barrel.ApplicationId = "save_data";
         }
 

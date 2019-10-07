@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Views.Pages.LoginInterface.LoginFirst"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <StackLayout Orientation="Vertical" Spacing="70">
+                <Image Source="MainLogo22.png" Margin="30"/>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                    <ImageButton Source="SignIn.png" HorizontalOptions="CenterAndExpand" Clicked="signin_transfer" WidthRequest="170" HeightRequest="50" BorderColor="Transparent" BackgroundColor="White"/>
+                    <ImageButton Source="SignUp.png" HorizontalOptions="CenterAndExpand" Clicked="signup_transfer" WidthRequest="170" HeightRequest="50" BorderColor="Transparent" BackgroundColor="White"/>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

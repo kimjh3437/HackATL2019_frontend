@@ -8,14 +8,10 @@
              xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
              BarBackgroundColor="White"
              BarTextColor="Black"
-            xmlns:room="clr-namespace:HackATL_EEVM.Views.Pages.Map_children">
+            xmlns:room="clr-namespace:HackATL_EEVM.Views.Pages.Map_children"
+            >
 
-    <TabbedPage.BindingContext>
-        <viewmodel:AboutViewModel/>
-    </TabbedPage.BindingContext>
-    <TabbedPage.ToolbarItems>
-        <ToolbarItem IconImageSource="FacebookIcon.png" Command="{Binding OpenWebCommand_FB}"/>
-    </TabbedPage.ToolbarItems>
+    
     <!--Pages can be added as references or inline-->
 
     <TabbedPage.Children>

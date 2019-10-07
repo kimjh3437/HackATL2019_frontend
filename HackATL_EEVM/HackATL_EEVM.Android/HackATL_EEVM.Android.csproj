@@ -291,7 +291,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\MainLogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\HackATLLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\MapIcon.png" />
@@ -558,7 +558,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\MainLogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\HackATLLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\MapIcon.png" />
@@ -867,7 +867,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\MainLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\HackATLLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\MapIcon.png" />
@@ -1176,7 +1176,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\MainLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\HackATLLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\MapIcon.png" />
@@ -1360,6 +1360,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\MainLogo22.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

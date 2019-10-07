@@ -9,18 +9,16 @@
              x:Class="HackATL_EEVM.Main"           
              BarBackgroundColor="White"
              BarTextColor="Black"           
-             NavigationPage.HasNavigationBar="False"
-            BackgroundColor="White">
+             
+            BackgroundColor="White"
+            >
 
     <TabbedPage.Effects>
         <local:NoShiftEffects />
     </TabbedPage.Effects>
 
-    
 
-    <!--Pages can be added as references or inline-->
-
-    <NavigationPage NavigationPage.HasNavigationBar="False" Icon="HomeIcon.png" Title="Home">
+    <NavigationPage NavigationPage.HasNavigationBar="False" Icon="HomeIcon.png">
         <x:Arguments>
             <local:Home/>
         </x:Arguments>

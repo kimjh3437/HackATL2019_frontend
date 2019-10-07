@@ -5,34 +5,38 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HackATL_EEVM.Pages.LoginInterface.LoginPage"
-             xmlns:viewModels="clr-namespace:HackATL_EEVM.ViewModels.User_related">
+             xmlns:viewModels="clr-namespace:HackATL_EEVM.ViewModels.User_related"
+             BackgroundColor="White"
+             >
     <ContentPage.BindingContext>
         <viewModels:LoginUserViewModel/>
     </ContentPage.BindingContext>
-    
-    <ContentPage.ToolbarItems>
-
-        <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
-
-    </ContentPage.ToolbarItems>
-
-    
 
     <ContentPage.Content>
+        
 
         <StackLayout VerticalOptions="StartAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="70">
+                    <Image Source="MainLogo22.png" Margin="30"/>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Spacing="30">
+                        <StackLayout>
+                            <StackLayout>
+                                <Label Text="Email" HorizontalOptions="StartAndExpand"/>
+                                <Entry x:Name="emailEntry" BackgroundColor="Yellow" Opacity="10" />
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="Password" HorizontalOptions="StartAndExpand"/>
+                                <Entry x:Name="passwordEntry" BackgroundColor="LightCoral" Opacity="10"/>
+                            </StackLayout>
 
-            <Label Text="Username" />
+                        </StackLayout>
+                        
+                        <ImageButton Source="SignUp2.png" WidthRequest="140" HeightRequest="35" BorderColor="Transparent" BackgroundColor="White" Clicked="Login_clicked"/>
+                    </StackLayout>
 
-            <Entry x:Name="usernameEntry" Placeholder="username" />
-
-            <Label Text="Password" />
-
-            <Entry x:Name="passwordEntry" IsPassword="true" />
-
-            <Button Text="Login" Clicked="Login_clicked" />
-
-            <Label x:Name="messageLabel" />
+                </StackLayout>
+            </StackLayout>
 
         </StackLayout>
 

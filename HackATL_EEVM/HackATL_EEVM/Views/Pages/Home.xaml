@@ -7,16 +7,9 @@
              x:Class="HackATL_EEVM.Home"
              xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
              BackgroundColor="White"
+             
              >
-    <ContentPage.BindingContext>
-        <viewmodel:AboutViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="ProfileIcon.png" />
-        
-        <ToolbarItem Command="{Binding OpenWebCommand_FB}" IconImageSource="FacebookIcon.png"/>
-        
-    </ContentPage.ToolbarItems>
+    
     
     <ContentPage.Content>
         <StackLayout Spacing="35" Orientation="Vertical" VerticalOptions="Start" >
@@ -28,7 +21,7 @@
 
                 </StackLayout>
                 <StackLayout>
-                    <Image Source="MainLogo.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <Image Source="MainLogo22.png"/>
                 </StackLayout>
 
             </StackLayout>

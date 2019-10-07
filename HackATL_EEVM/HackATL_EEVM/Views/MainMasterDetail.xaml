@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Views.MainMasterDetail"
+             xmlns:pages="clr-namespace:HackATL_EEVM.Views"
+             xmlns:locals="clr-namespace:HackATL_EEVM"
+                  xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
+                  
+                  >
+  <MasterDetailPage.Master >
+    <pages:MainMasterDetailMaster x:Name="MasterPage" IconImageSource="ProfileIcon.png"/>
+
+  </MasterDetailPage.Master>
+    <MasterDetailPage.BindingContext>
+        <viewmodel:AboutViewModel/>
+    </MasterDetailPage.BindingContext>
+
+    
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem Command="{Binding OpenWebCommand_FB}" IconImageSource="FacebookIcon.png"/>
+    </MasterDetailPage.ToolbarItems>
+
+
+    <MasterDetailPage.Detail>
+    <NavigationPage>
+      <x:Arguments>
+        <locals:Main IconImageSource="ProfileIcon.png"/>
+      </x:Arguments>
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

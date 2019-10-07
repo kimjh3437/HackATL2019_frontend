@@ -74,6 +74,10 @@ namespace HackATL_EEVM.Pages.LoginInterface
 
 
         }
+        async void signup_transfer(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
 
 
         public async Task<bool> Overlap(User user_input)

@@ -6,34 +6,32 @@
              mc:Ignorable="d"
              x:Class="HackATL_EEVM.FAQ"
              xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
+             BackgroundColor="White"
+             
              >
 
-    <ContentPage.BindingContext>
-        <viewmodel:AboutViewModel/>
-    </ContentPage.BindingContext>
     
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="FacebookIcon.png" Command="{Binding OpenWebCommand_FB}"/>
-    </ContentPage.ToolbarItems>
    
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="35" Spacing="50" Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
-                <StackLayout Margin="20" Spacing="30">
-                    <Button Text="About HackATL" BackgroundColor="#8b7ab3" Clicked="Button_About"                                             
-                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="320" HeightRequest="110" 
+                <StackLayout Margin="20" Spacing="30" Orientation="Vertical">
+                    <ImageButton Source="BeforeArrive.png" BackgroundColor="White" Clicked="Button_About" BorderColor="Transparent"                                             
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center" 
                     />
-                    <Button Text="General Questions" BackgroundColor="#A48FD4" Clicked="Button_General"                                           
-                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="320" HeightRequest="110"
+                    <ImageButton Source="WhenArrive.png" BackgroundColor="White" Clicked="Button_General" BorderColor="Transparent"                                           
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
                     />
                 </StackLayout>
-                <StackLayout Margin="20" Spacing="30">
-                    <Button Text="Question Board" BackgroundColor="#8cccec" Clicked="Button_Question"                     
-                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="320" HeightRequest="110" 
+                <StackLayout Margin="20" Spacing="30" Orientation="Vertical">
+                    <ImageButton Source="FoodFAQ.png" BackgroundColor="White" Clicked="Button_Question" BorderColor="Transparent"                     
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
                     />
-                    <Button Text="Live Chat" BackgroundColor="#8CC0DA" Clicked="Button_Live"                                            
-                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="320" HeightRequest="110"
+                    <ImageButton Source="PitchingFAQ.png"  BackgroundColor="White" Clicked="Button_Live" BorderColor="Transparent"                                   
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
                     />
+                    <ImageButton Source="OthersFAQ.png" BackgroundColor="White" BorderColor="Transparent"
+                                 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
             </StackLayout>
 
