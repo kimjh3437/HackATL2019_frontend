@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
@@ -24,6 +25,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="XamEffects" Version="1.6.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,46 +50,46 @@
     <EmbeddedResource Update="Views\AdminPages\Admin_children\Admin_agendaList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainMasterDetail.xaml">
+    <EmbeddedResource Update="Views\MainTab.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainMasterDetailMaster.xaml">
+    <EmbeddedResource Update="Views\Master\MaserMenuNav\ProfileView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ.xaml">
+    <EmbeddedResource Update="Views\Master\MasterMainPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ_children\FAQ_abouthackatl.xaml">
+    <EmbeddedResource Update="Views\Master\MasterMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ_children\FAQ_general.xaml">
+    <EmbeddedResource Update="Views\Master\OptionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ_children\FAQ_livechat.xaml">
+    <EmbeddedResource Update="Views\Master\SignUpPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ_children\FAQ_question.xaml">
+    <EmbeddedResource Update="Views\Pages\AgendaView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\FAQ_children\Livechat\livechat.xaml">
+    <EmbeddedResource Update="Views\Pages\DaysContentPage\FridayView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\LoginInterface\LoginFirst.xaml">
+    <EmbeddedResource Update="Views\Pages\DaysContentPage\PreView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Map.xaml">
+    <EmbeddedResource Update="Views\Pages\DaysContentPage\SatView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Map_children\Map_floorplans.xaml">
+    <EmbeddedResource Update="Views\Pages\DaysContentPage\SunView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Map_children\Map_reservation.xaml">
+    <EmbeddedResource Update="Views\Pages\FAQView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Map_children\Map_reservationDemo.xaml">
+    <EmbeddedResource Update="Views\Pages\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Pitch.xaml">
+    <EmbeddedResource Update="Views\Pages\PitchView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Pages\QR.xaml">
@@ -126,22 +128,13 @@
     <EmbeddedResource Update="Views\Pages\Agenda.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\Home.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Main.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\LoginInterface\LoginPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Pages\LoginInterface\SignUpPage.xaml">
+    <EmbeddedResource Update="Views\Pages\RoomView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="FirebaseAuth\" />
     <Folder Include="Views\AdminPages\Admin_children\Admin_agendaList_Children\" />
-    <Folder Include="Views\Pages\Map_children\Map_reservationDetailPage\" />
   </ItemGroup>
 </Project>

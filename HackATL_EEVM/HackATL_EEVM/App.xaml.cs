@@ -6,13 +6,13 @@ using HackATL_EEVM.Services;
 using HackATL_EEVM.Views;
 using HackATL_EEVM;
 using MonkeyCache.SQLite;
-using HackATL_EEVM.Database;
+
 using System.Threading.Tasks;
 using HackATL_EEVM.Helpers_token;
-using HackATL_EEVM.Views.Pages.FAQ_children;
-using HackATL_EEVM.Views.Pages.FAQ_children.Livechat;
+
 using HackATL_EEVM.Services.User_related;
-using HackATL_EEVM.Views.Pages.LoginInterface;
+using DLToolkit.Forms.Controls;
+using HackATL_EEVM.Views.Master;
 
 namespace HackATL_EEVM
 {
@@ -52,6 +52,7 @@ namespace HackATL_EEVM
         public App()
         {
             InitializeComponent();
+            FlowListView.Init();
             userManager = new UserManager(new UserService());
             //DependencyService.Register<AzureDataStore>();
             //DependencyService.Register<UserService>();
@@ -67,8 +68,9 @@ namespace HackATL_EEVM
             //   MainPage = new NavigationPage(new HackATL_EEVM.Pages.LoginInterface.LoginPage());           
             //else
             //MainPage = new NavigationPage(new MainMasterDetail());
-            MainPage = new NavigationPage(new LoginFirst());
-            
+            //MainPage = new NavigationPage(new LoginFirst());
+            MainPage = new MasterMainPageDetail();
+
             //Barrel.ApplicationId = "save_data";
         }
 

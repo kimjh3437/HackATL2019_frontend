@@ -18,7 +18,24 @@ namespace HackATL_EEVM
         public Agenda()
         {
             InitializeComponent();
+            tabPage.CurrentPageChanged += TabPage_CurrentPageChanged;
            
+        }
+        private void TabPage_CurrentPageChanged(object sender, EventArgs e)
+        {
+            var tabbedPage = (TabbedPage)sender;
+            if (tabPage.CurrentPage.TabIndex == 0)
+            {
+                tabPage.CurrentPage.IconImageSource = ImageSource.FromResource("AgendaSelected.png");
+                var page = tabPage.Children.Where(X => X.TabIndex != 1).ToArray();
+                page[0].IconImageSource = ImageSource.FromResource("AgendaNotSelected.png");
+            }
+            else
+            {
+                tabPage.CurrentPage.IconImageSource = ImageSource.FromResource("AgendaNotSelected.png");
+                var page = tabPage.Children.Where(x => x.TabIndex != 1).ToArray();
+                page[0].IconImageSource = ImageSource.FromResource("AgendaSelected.png");
+            }
         }
     }
 }

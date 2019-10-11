@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "22725666722",
+    "firebase_url": "https://eevmhackatl.firebaseio.com",
+    "project_id": "eevmhackatl",
+    "storage_bucket": "eevmhackatl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22725666722:android:6553ab260480d5773434fb",
+        "android_client_info": {
+          "package_name": "com.eevmhackatl.HackATL_EEVM"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22725666722-q22gfmuq5n13qm7u1l00f6gmsk7p5tov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbD5Nv5NkhJ-up7dSUUDYMnhPT16xVg2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22725666722-q22gfmuq5n13qm7u1l00f6gmsk7p5tov.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "22725666722-niians5ijuct8o0eh2g0d3asujlskg8u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eevmhackatl.HackATLEEVM"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

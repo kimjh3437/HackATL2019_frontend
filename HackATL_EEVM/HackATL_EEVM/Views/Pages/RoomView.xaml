@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="HackATL_EEVM.Views.Pages.RoomView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView">
+    <ScrollView Grid.Row="0" VerticalScrollBarVisibility="Never">
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Margin="0,10,0,10"
+                Aspect="AspectFit"
+                HeightRequest="40"
+                HorizontalOptions="FillAndExpand"
+                Source="YourConnectionsButton" />
+
+            <Label
+                Grid.Row="1"
+                Margin="0,10,0,0"
+                FontFamily="Gotham-Book"
+                FontSize="14"
+                HorizontalOptions="CenterAndExpand"
+                Text="Room For How Many People?"
+                TextColor="#FF6F61"
+                VerticalTextAlignment="Center" />
+
+            <StackLayout
+                Grid.Row="2"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                Spacing="20">
+
+                <Image
+                    x:Name="imgFour"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="four.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgFour_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgSix"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Six.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgSix_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgEight"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Eight.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgEight_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgTen"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Ten.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgTen_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgCustom"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Custom.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgCustom_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+
+            <Label
+                Grid.Row="3"
+                Margin="0,10,0,0"
+                FontFamily="Gotham-Book"
+                FontSize="14"
+                HorizontalOptions="CenterAndExpand"
+                Text="Room For How Many Long? (Hours)"
+                TextColor="#FF6F61"
+                VerticalTextAlignment="Center" />
+
+            <StackLayout
+                Grid.Row="4"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                Spacing="20">
+
+                <Image
+                    x:Name="imgHalf"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Half.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgHalf_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgOne"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="One.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgOne_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgThree"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Three.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgThree_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgSixH"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Six.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgSixH_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="imgCustomH"
+                    Margin="0"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="FillAndExpand"
+                    Source="Custom.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgCustomH_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </StackLayout>
+
+            <flv:FlowListView
+                x:Name="lstRomms"
+                Grid.Row="5" FlowItemTapped="LstRomms_FlowItemTapped"
+                Margin="25"
+                FlowColumnCount="1"
+                HasUnevenRows="True"
+                HorizontalOptions="FillAndExpand"
+                SeparatorVisibility="None"
+                VerticalOptions="FillAndExpand">
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Margin="5"
+                            Padding="0"
+                            ColumnSpacing="0"
+                            RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0">
+                                <Label
+                                    Margin="5,0,0,0"
+                                    FontAttributes="Bold"
+                                    FontSize="17"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding gbs}"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="End" />
+
+                                <Label
+                                    Margin="5,0,0,0"
+                                    FontSize="13"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding booking}"
+                                    TextColor="Black"
+                                    VerticalTextAlignment="Start" />
+                            </StackLayout>
+
+                            <Image
+                                x:Name="imgBookNow"
+                                Grid.Column="1"
+                                Margin="0"
+                                Aspect="AspectFit"
+                                HeightRequest="30"
+                                HorizontalOptions="FillAndExpand"
+                                Source="{Binding IsBookNow, Mode=TwoWay}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="imgBookNow_Clicked" />
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                        </Grid>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+
+
+
+
+        </Grid>
+
+    </ScrollView>
+</ContentView>

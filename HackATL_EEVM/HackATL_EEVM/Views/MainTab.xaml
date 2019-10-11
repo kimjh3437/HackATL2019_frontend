@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HackATL_EEVM.Views.MainTab"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid
+        Margin="0"
+        Padding="0"
+        RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Margin="0"
+            Padding="10,10,10,0"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand">
+
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="45"
+                HorizontalOptions="StartAndExpand"
+                Source="ProfileIcon">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="45"
+                HorizontalOptions="EndAndExpand"
+                Source="FacebookIcon" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Facebook_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+
+        <!--<ScrollView
+            Grid.Row="1"
+            Padding="0"
+            VerticalScrollBarVisibility="Never">-->
+        <Grid
+            x:Name="GrdMain"
+            Grid.Row="1"
+            ColumnSpacing="0"
+            RowSpacing="0" />
+        <!--</ScrollView>-->
+
+
+        <Grid
+            Grid.Row="2"
+            Margin="0"
+            Padding="0,0,0,10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout
+                Grid.Column="0"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="3">
+
+                <Image
+                    x:Name="img1"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    Source="HomeIcon" />
+
+                <Label
+                    x:Name="lbl1"
+                    FontAttributes="Bold"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="HOME"
+                    TextColor="#FE7061"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnHome"
+                        NumberOfTapsRequired="1"
+                        Tapped="BtnHome_Tapped" />
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Column="1"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="3">
+
+                <Image
+                    x:Name="img2"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    Source="AgendaIcon.png" />
+
+                <Label
+                    x:Name="lbl2"
+                    FontAttributes="Bold"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="AGENDA"
+                    TextColor="#FE7061"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnAgenda"
+                        NumberOfTapsRequired="1"
+                        Tapped="BtnAgenda_Tapped" />
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Column="2"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="3">
+
+                <Image
+                    x:Name="img3"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    Source="PitchIcon" />
+
+                <Label
+                    x:Name="lbl3"
+                    FontAttributes="Bold"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="PITCH"
+                    TextColor="#FE7061"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnPitch"
+                        NumberOfTapsRequired="1"
+                        Tapped="BtnPitch_Tapped" />
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Column="3"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="3">
+
+                <Image
+                    x:Name="img4"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    Source="MapIcon" />
+
+                <Label
+                    x:Name="lbl4"
+                    FontAttributes="Bold"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="ROOMS"
+                    TextColor="#FE7061"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnRooms"
+                        NumberOfTapsRequired="1"
+                        Tapped="BtnRooms_Tapped" />
+                </StackLayout.GestureRecognizers>
+
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Column="4"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="3">
+
+                <Image
+                    x:Name="img5"
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    Source="FAQIcon" />
+
+                <Label
+                    x:Name="lbl5"
+                    FontAttributes="Bold"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="FAQ"
+                    TextColor="#FE7061"
+                    VerticalOptions="CenterAndExpand"
+                    VerticalTextAlignment="Center" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        x:Name="btnFAQ"
+                        NumberOfTapsRequired="1"
+                        Tapped="BtnFAQ_Tapped" />
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

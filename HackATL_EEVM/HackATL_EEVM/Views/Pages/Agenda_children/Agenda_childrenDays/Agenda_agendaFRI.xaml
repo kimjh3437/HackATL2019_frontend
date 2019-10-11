@@ -70,13 +70,7 @@
                                         WidthRequest="35"/>
                                 </StackLayout>
 
-                                <StackLayout>
-                                    <hackatl_eevm:ToggleButton CheckedImage="IconChecked.png"
-                                     UnCheckedImage="IconUnChecked.png"
-                                     Animate="True" Padding="0,4,0,0" Checked="{Binding FilterByOverdue, Mode=TwoWay}"
-                                     Command="{Binding FilterOverdueCommand}" VerticalOptions="StartAndExpand"
-                                     Enabled="{Binding FilterEnabled}" />
-                                </StackLayout>
+                                
 
                             </StackLayout>
 

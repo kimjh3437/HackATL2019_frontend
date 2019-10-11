@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="HackATL_EEVM.Views.Master.OptionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+
+        <Grid
+            Margin="0"
+            Padding="25"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="30"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Margin="0,20,0,0"
+                Aspect="AspectFit"
+                HeightRequest="300"
+                Source="MainLogo"
+                VerticalOptions="CenterAndExpand" />
+
+            <Image
+                Grid.Row="1"
+                Aspect="AspectFit"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                Source="SignIn"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="SignIn" Tapped="ImgSignIn_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image
+                Grid.Row="2"
+                Aspect="AspectFit"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                Source="SignUp"
+                VerticalOptions="CenterAndExpand" />
+
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

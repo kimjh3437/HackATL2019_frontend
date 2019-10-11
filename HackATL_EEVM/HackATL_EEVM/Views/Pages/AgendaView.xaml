@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="HackATL_EEVM.Views.Pages.AgendaView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    xmlns:xe="clr-namespace:XamEffects;assembly=XamEffects"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid
+        Margin="0"
+        Padding="0"
+        RowSpacing="0"
+        VerticalOptions="FillAndExpand">
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Margin="0"
+                Padding="10,0,10,0"
+                ColumnSpacing="10"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    x:Name="img1"
+                    Grid.Column="0"
+                    Margin="0,5,0,5"
+                    HorizontalOptions="FillAndExpand"
+                    Source="AgendaSelected.png"
+                    VerticalOptions="StartAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnAgenda"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnAgenda_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image
+                    x:Name="img2"
+                    Grid.Column="1"
+                    Margin="0,5,0,5"
+                    HorizontalOptions="FillAndExpand"
+                    Source="MyAgendaNotSelected.png"
+                    VerticalOptions="StartAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnMyAgenda"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnMyAgenda_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!--<Frame
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="3"
+                        BorderColor="#FE7061"
+                        CornerRadius="20"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Label
+                            FontFamily="Gotham-Medium"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="AGENDA"
+                            TextColor="#FE7061"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+
+                    </Frame>-->
+
+                <!--<Frame
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="3"
+                        BackgroundColor="#FE7061"
+                        CornerRadius="20"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Label
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="MY AGENDA"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+
+                    </Frame>-->
+
+                <Image
+                    x:Name="imgFilter"
+                    Grid.Column="2"
+                    Margin="0,5,0,5"
+                    HeightRequest="35"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="FilterNotSelected.png"
+                    VerticalOptions="StartAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="filter" Tapped="Filter_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+
+            <!--<flv:FlowListView
+                    x:Name="flvMain"
+                    Grid.Row="1"
+                    HasUnevenRows="True">
+
+                    <flv:FlowListView.FlowColumnTemplate>
+
+                        <DataTemplate>-->
+            <Grid
+                Grid.Row="1"
+                Margin="5,0,5,0"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="StartAndExpand">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Column="0"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        x:Name="lblPre"
+                        FontFamily="Gotham-Medium"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Text="PRE"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnPre"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnPre_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="1"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        x:Name="lblFri"
+                        FontFamily="Gotham-Medium"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Text="FRI"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnFri"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnFri_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="2"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        x:Name="lblSat"
+                        FontFamily="Gotham-Medium"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Text="SAT"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnSat"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnSat_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Column="3"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand"
+                    Spacing="0"
+                    VerticalOptions="FillAndExpand">
+                    <Label
+                        x:Name="lblSun"
+                        FontFamily="Gotham-Medium"
+                        FontSize="14"
+                        HorizontalOptions="FillAndExpand"
+                        Text="SUN"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:Name="btnSun"
+                            NumberOfTapsRequired="1"
+                            Tapped="BtnSun_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <!--</DataTemplate>
+
+                    </flv:FlowListView.FlowColumnTemplate>
+
+                </flv:FlowListView>-->
+
+            <Grid
+                x:Name="grdMain"
+                Grid.Row="2"
+                ColumnSpacing="0"
+                RowSpacing="0" />
+
+            <Grid
+                x:Name="grdFilterMenu"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Margin="0"
+                Padding="15"
+                BackgroundColor="#FE7061"
+                ColumnSpacing="15"
+                HeightRequest="200"
+                HorizontalOptions="EndAndExpand"
+                IsVisible="False"
+                RowSpacing="10"
+                VerticalOptions="StartAndExpand"
+                WidthRequest="130">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+
+                <Grid
+                    Grid.Row="0"
+                    Margin="0"
+                    Padding="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        x:Name="imgFilterButton"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="FilterButton.png" />
+
+                    <Label
+                        Grid.Column="1"
+                        FontFamily="Gotham-Book"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Food"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgFood" Tapped="ImgFood_Tapped" />
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid
+                    Grid.Row="1"
+                    Margin="0"
+                    Padding="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        x:Name="imgUnselectedFilterButton"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="FilterButton.png" />
+
+                    <Label
+                        Grid.Column="1"
+                        FontFamily="Gotham-Book"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Pitches"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgPitches" Tapped="ImgPitches_Tapped" />
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</ContentView>

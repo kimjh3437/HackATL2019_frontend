@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HackATL_EEVM.ViewModels.Item_related
 {
-    class ItemsViewModel_Firebase
+    public class ItemsViewModel_Firebase
     {
     }
 }

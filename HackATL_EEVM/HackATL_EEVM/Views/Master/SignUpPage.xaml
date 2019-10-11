@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Views.Master.SignUpPage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ext="clr-namespace:HackATL_EEVM.Extension">
+    <ScrollView VerticalScrollBarVisibility="Never">
+
+        <Grid
+            Margin="0"
+            Padding="25"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="10"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Margin="0,0,0,30"
+                Aspect="AspectFit"
+                HeightRequest="300"
+                Source="MainLogo"
+                VerticalOptions="StartAndExpand" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+                    x:Name="lblEmail"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Email"
+                    TextColor="Black" />
+
+                <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                    <ext:ExtEntry
+                        x:Name="txtEmail"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand" />
+
+                    <BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+                    x:Name="lblPassword"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Password"
+                    TextColor="Black" />
+
+                <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                    <ext:ExtEntry
+                        x:Name="txtPassword"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="True" />
+
+                    <BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />
+
+
+                </StackLayout>
+
+            </StackLayout>
+
+            <Image
+                Grid.Row="3"
+                Margin="0,20,0,0"
+                Aspect="AspectFit"
+                HeightRequest="45"
+                HorizontalOptions="CenterAndExpand"
+                Source="SignUp2"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="imgSignUp" Tapped="ImgSignUp_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+
+    </ScrollView>
+</ContentPage>

@@ -11,19 +11,20 @@
              xmlns:viewmodel="clr-namespace:HackATL_EEVM.ViewModels"
             BarBackgroundColor="White"
             d:BarTextColor="Black"
+            x:Name="tabPage"
             
              >
   <!--Pages can be added as references or inline-->
     
 
     <TabbedPage.Children>
-        <NavigationPage Icon="AgendaNotSelected.png" >
+        <NavigationPage Icon="AgendaNotSelected.png" x:Name="Tab1" TabIndex="0" >
             <x:Arguments>
                 <local:Agenda_agenda/>
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Icon="MyAgendaNotSelected.png" >
+        <NavigationPage Icon="MyAgendaNotSelected.png" x:Name="Tab2" TabIndex="1" >
             <x:Arguments>
                 <local:Agenda_myagenda/>
             </x:Arguments>
