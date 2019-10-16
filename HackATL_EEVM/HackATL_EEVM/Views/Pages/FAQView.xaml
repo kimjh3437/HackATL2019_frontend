@@ -6,8 +6,19 @@
              mc:Ignorable="d"
              x:Class="HackATL_EEVM.Views.Pages.FAQView">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
+        <StackLayout Margin="15" Spacing="20">
+            <Image Source="QuestionsAbout" Margin="25" HeightRequest="15" WidthRequest="75"/>
+            <StackLayout Spacing="35" Margin="45">
+                <Image Source="BeforeArrive"/>
+                <Image Source="WhenArrive.png"/>
+                <Image Source="PitchingFAQ.png"/>
+                <Image Source="FoodFAQ.png"/>
+                <Image Source="OthersFAQ.png"/>
+
+
+            </StackLayout>
+            
+          
+        </StackLayout>
   </ContentView.Content>
 </ContentView>

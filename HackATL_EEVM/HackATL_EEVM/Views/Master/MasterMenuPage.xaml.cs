@@ -25,18 +25,17 @@ namespace HackATL_EEVM.Views.Master
         }
 
         
-        async void viewProfileTapped(object sender, EventArgs e)
+        private void viewProfileTapped(object sender, EventArgs e)
         {
-            try
-            {
-                var page = new ProfileView();
-                await Navigation.PushAsync(new Xamarin.Forms.NavigationPage(page));
+           
+                var page = new Xamarin.Forms.NavigationPage(new ProfileView());
+                Utilities.Common.MasterPage.Detail = page;
+                Xamarin.Forms.NavigationPage.SetHasNavigationBar(page,true);
+                Xamarin.Forms.NavigationPage.SetHasBackButton(page, true);
+                Utilities.Common.MasterPage.IsPresented = false;
 
-            }
-            catch(Exception ex)
-            {
-                await DisplayAlert("Error", "error occurred","OK");
-            }
+
+           
             
         }
     }

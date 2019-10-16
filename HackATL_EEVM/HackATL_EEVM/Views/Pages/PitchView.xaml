@@ -6,8 +6,17 @@
              mc:Ignorable="d"
              x:Class="HackATL_EEVM.Views.Pages.PitchView">
   <ContentView.Content>
-      <StackLayout>
-            <Label Text="Hello Xamarin.Forms!"/>
+        <StackLayout Margin="30">
+            <Image Source="AllInfo.png"/>
+            <StackLayout Orientation="Vertical" Margin="30" Spacing="50">
+                <Image Source="JudgingRubric.png"/>
+                <Image Source="SubmitTeam.png"/>
+                <Image Source="SubmitPitch.png"/>
+                <Image Source="PitchTime.png"/>
+                <Image Source="LiveResult.png"/>
+            </StackLayout>
+
         </StackLayout>
+      
   </ContentView.Content>
 </ContentView>

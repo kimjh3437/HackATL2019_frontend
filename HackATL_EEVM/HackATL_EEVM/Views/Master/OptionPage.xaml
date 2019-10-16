@@ -47,7 +47,15 @@
                 HeightRequest="40"
                 HorizontalOptions="CenterAndExpand"
                 Source="SignUp"
-                VerticalOptions="CenterAndExpand" />
+                VerticalOptions="CenterAndExpand">
+
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="SignUp" Tapped="ImgSignup_Tapped"/>
+
+                </Image.GestureRecognizers>
+
+            </Image>
+                
 
         </Grid>
 

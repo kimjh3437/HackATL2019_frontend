@@ -76,6 +76,10 @@ namespace HackATL_EEVM.Views
         {
             Device.OpenUri(new Uri("https://www.facebook.com/EmoryEVM/"));
         }
+        async void ImgSignUp_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
 
         public void UnSelectedTabbed()
         {

@@ -25,5 +25,9 @@ namespace HackATL_EEVM.Views.Master
 
             Navigation.PushAsync(new Views.Master.SignUpPage());
         }
+        private void ImgSignup_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterPage());
+        }
     }
 }

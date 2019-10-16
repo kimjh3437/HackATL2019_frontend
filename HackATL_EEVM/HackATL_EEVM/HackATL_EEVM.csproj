@@ -65,6 +65,12 @@
     <EmbeddedResource Update="Views\Master\OptionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Master\PersonalInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Master\RegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Master\SignUpPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -134,7 +140,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="FirebaseAuth\" />
     <Folder Include="Views\AdminPages\Admin_children\Admin_agendaList_Children\" />
   </ItemGroup>
 </Project>
