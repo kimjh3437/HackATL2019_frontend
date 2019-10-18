@@ -59,13 +59,16 @@
                     <ext:ExtEntry
                         x:Name="txtEmail"
                         FontFamily="Gotham-Medium"
-                        HeightRequest="45"
-                        HorizontalOptions="FillAndExpand" />
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand" 
+                        Keyboard="Email"
+                        BackgroundColor="#FDC6CF"
+                        />
 
-                    <BoxView
+                    <!--<BoxView
                         BackgroundColor="Black"
                         HeightRequest="0.8"
-                        HorizontalOptions="FillAndExpand" />
+                        HorizontalOptions="FillAndExpand" />-->
 
                 </StackLayout>
 
@@ -98,14 +101,15 @@
                     <ext:ExtEntry
                         x:Name="txtPassword"
                         FontFamily="Gotham-Medium"
-                        HeightRequest="45"
+                        HeightRequest="35"
                         HorizontalOptions="FillAndExpand"
-                        IsPassword="True" />
+                        IsPassword="True"
+                        BackgroundColor="#FDC6CF"/>
 
-                    <BoxView
+                    <!--<BoxView
                         BackgroundColor="Black"
                         HeightRequest="0.8"
-                        HorizontalOptions="FillAndExpand" />
+                        HorizontalOptions="FillAndExpand" />-->
 
 
                 </StackLayout>

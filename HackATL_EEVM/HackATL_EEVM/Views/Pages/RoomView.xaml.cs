@@ -18,10 +18,8 @@ namespace HackATL_EEVM.Views.Pages
         {
             InitializeComponent();
             dummyDatas.Clear();
-            dummyDatas.Add(new DummyData() { Id = 1, gbs = "GBS 201", booking = "No Upcoming Booking" });
-            dummyDatas.Add(new DummyData() { Id = 2, gbs = "GBS 208", booking = "Booking Available" });
-            dummyDatas.Add(new DummyData() { Id = 3, gbs = "GBS 210", booking = "No Upcoming Booking" });
-            dummyDatas.Add(new DummyData() { Id = 4, gbs = "GBS 212", booking = "Shortly Announced" });
+            dummyDatas.Add(new DummyData() { Id = 1, gbs = "Currently not avaliable", booking = "No Upcoming Booking" });
+            
             lstRomms.FlowItemsSource = dummyDatas.ToList();
             lstRomms.HeightRequest = dummyDatas.Count() * 60;
         }

@@ -78,7 +78,12 @@ namespace HackATL_EEVM.Views
         }
         async void ImgSignUp_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            await Navigation.PopAsync();
+        }
+        async void finalsignup2_Tabbed(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+
         }
 
         public void UnSelectedTabbed()

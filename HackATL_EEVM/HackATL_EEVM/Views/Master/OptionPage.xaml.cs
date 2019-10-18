@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HackATL_EEVM.Helpers_token;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace HackATL_EEVM.Views.Master
         public OptionPage()
         {
             InitializeComponent();
+            
         }
         private void ImgSignIn_Tapped(object sender, EventArgs e)
         {
@@ -29,5 +31,16 @@ namespace HackATL_EEVM.Views.Master
         {
             Navigation.PushAsync(new RegisterPage());
         }
-    }
+
+        private void automaticLogin()
+        {
+            if (Settings.AccessToken != "")
+            {
+                Navigation.PushAsync(new Views.MainTab());
+
+            }
+
+        }
+        
+}
 }

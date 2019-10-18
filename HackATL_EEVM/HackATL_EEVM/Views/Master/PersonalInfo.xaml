@@ -4,12 +4,333 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HackATL_EEVM.Views.Master.PersonalInfo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="HackATL_EEVM.Views.Master.PersonalInfo"
+             xmlns:ext="clr-namespace:HackATL_EEVM.Extension"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid
+            Margin="0"
+            Padding="25"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="10"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Margin="0,20,0,0"
+                
+                Aspect="AspectFit"
+                HeightRequest="100"
+                Source="MainLogo.png"
+                VerticalOptions="CenterAndExpand" />
+
+            <Image
+                Grid.Row="1"
+                Margin="0,20,0,0"
+                Aspect="AspectFit"              
+                Source="SignUpBanner.png"
+                VerticalOptions="CenterAndExpand" />
+
+
+            <StackLayout
+                Grid.Row="2"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="StartAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout>
+                        <Label
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Firstname"
+                    TextColor="Black" />
+
+                        <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="StartAndExpand"
+                    Spacing="0"
+                    WidthRequest="150">
+
+                            <ext:ExtEntry
+                        x:Name="txtFirstname"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                                BackgroundColor="#FFF4BF"/>
+
+                            <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                        </StackLayout>
+
+                    </StackLayout>
+                    <StackLayout>
+                        <Label
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Lastname"
+                    TextColor="Black" />
+
+                        <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="StartAndExpand"
+                    Spacing="0"
+                    WidthRequest="150">
+
+                            <ext:ExtEntry
+                        x:Name="txtLastname"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                                BackgroundColor="#FFF4BF"/>
+
+                            <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                        </StackLayout>
+
+                    </StackLayout>
+                    
+                </StackLayout>
+
+               
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="3"               
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="StartAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+                    x:Name="lblUniversity"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="University"
+                    TextColor="Black" />
+
+                <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                    <ext:ExtEntry
+                        x:Name="txtUniversity"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#FFF4BF"/>
+
+                    <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                </StackLayout>
+            </StackLayout>
+
+            
+
+            <StackLayout
+                Grid.Row="6"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation ="Horizontal" >
+                    <Label 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text ="Linkedin.com/in/" 
+                        FontFamily="Gotham-Medium" 
+                        FontSize="14"
+                        />
+                    <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                        <ext:ExtEntry
+                        x:Name="txtLinkedIn"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                            BackgroundColor="#FFF4BF"/>
+
+                        <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout
+                Grid.Row="7"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation ="Horizontal" >
+                        <Label 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text ="Facebook.com/" 
+                        FontFamily="Gotham-Medium" 
+                        FontSize="14"
+                        />
+                        <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                            <ext:ExtEntry
+                        x:Name="txtFacebook"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                                BackgroundColor="#FFF4BF"/>
+
+                            <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout
+                Grid.Row="8"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation ="Horizontal" >
+                            <Label 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text ="Instagram.com/" 
+                        FontFamily="Gotham-Medium" 
+                        FontSize="14"
+                        />
+                            <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                                <ext:ExtEntry
+                        x:Name="txtInstagram"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="#FFF4BF"/>
+
+                                <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout
+                Grid.Row="9"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation ="Horizontal" >
+                            <Label 
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text ="Twitter.com/" 
+                        FontFamily="Gotham-Medium" 
+                        FontSize="14"
+                        />
+                            <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                                <ext:ExtEntry
+                        x:Name="txtTwitter"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="#FFF4BF"/>
+
+                                <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Image
+                Grid.Row="10"
+                Margin="0,20,0,0"
+                Aspect="AspectFit"
+                HeightRequest="45"
+                HorizontalOptions="CenterAndExpand"
+                Source="Save.png"
+                VerticalOptions="CenterAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer x:Name ="finalsignup" Tapped="finalsignup2_Tabbed"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+   
 </ContentPage>

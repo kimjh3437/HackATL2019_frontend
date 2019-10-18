@@ -16,5 +16,20 @@ namespace HackATL_EEVM.Views.Pages
         {
             InitializeComponent();
         }
+
+        private void JudgingRub_Tapped(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubmitTeam_Tapped(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubmitPitch_Tapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HackATL_EEVM.Views.Pages.FAQquestions.Pitching"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="50" Margin="45" VerticalOptions="CenterAndExpand">
+            <Image Source="EvaluationCriteria.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="evaluation" Tapped="Evaluation_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="Prizes.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Prizes" Tapped="Prizes_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="Teams.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="teams" Tapped="Teams_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

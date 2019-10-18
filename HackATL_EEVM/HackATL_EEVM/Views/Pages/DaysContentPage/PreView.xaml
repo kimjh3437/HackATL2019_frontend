@@ -3,15 +3,18 @@
     x:Class="HackATL_EEVM.Views.Pages.DaysContentPage.PreView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView">
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design">
     <flv:FlowListView
         x:Name="flvTypes"
         FlowColumnCount="1"
-        FlowItemTapped="FlvTypes_FlowItemTapped"
         HasUnevenRows="True"
         HorizontalOptions="FillAndExpand"
         SeparatorVisibility="None"
-        VerticalOptions="FillAndExpand">
+        VerticalOptions="FillAndExpand"
+        ItemSelected="FlvTypes_ItemSelected"
+        
+        >
         <flv:FlowListView.FlowColumnTemplate>
             <DataTemplate>
                 <Grid
@@ -19,7 +22,9 @@
                     Padding="0,10,0,10"
                     ColumnSpacing="0"
                     RowSpacing="0"
-                    VerticalOptions="StartAndExpand">
+                    VerticalOptions="StartAndExpand"
+                    
+                    >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />

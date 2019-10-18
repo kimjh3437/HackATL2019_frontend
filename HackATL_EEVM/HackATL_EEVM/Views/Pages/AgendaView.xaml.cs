@@ -22,6 +22,7 @@ namespace HackATL_EEVM.Views.Pages
             grdFilterMenu.IsVisible = false;
             lblPre.TextColor = Color.FromHex("#FE7061");
             grdMain.Children.Add(new DaysContentPage.PreView());
+           
         }
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
@@ -51,17 +52,52 @@ namespace HackATL_EEVM.Views.Pages
                 grdFilterMenu.IsVisible = false;
             }
         }
+        private void ImgWorkshop_Tapped(object sender, EventArgs e)
+        {
+            imgUnselectedFilterButtonWorkshop.Source = "FilterButtonSelected.png";
+            imgUnselectedFilterButtonMentor.Source = "FilterButton.png";
+            imgUnselectedFilterButtonPitch.Source = "FilterButton.png";
+            imgFilterButtonFood.Source = "FilterButton.png";
+            imgFilterButtonAll.Source = "FilterButton.png";
+
+        }
+
+        private void ImgMentors_Tapped(object sender, EventArgs e)
+        {
+            imgUnselectedFilterButtonWorkshop.Source = "FilterButton.png";
+            imgUnselectedFilterButtonMentor.Source = "FilterButtonSelected.png";
+            imgUnselectedFilterButtonPitch.Source = "FilterButton.png";
+            imgFilterButtonFood.Source = "FilterButton.png";
+            imgFilterButtonAll.Source = "FilterButton.png";
+
+        }
 
         private void ImgFood_Tapped(object sender, EventArgs e)
         {
-            imgFilterButton.Source = "FilterButtonSelected";
-            imgUnselectedFilterButton.Source = "FilterButton";
+            imgUnselectedFilterButtonWorkshop.Source = "FilterButton.png";
+            imgUnselectedFilterButtonMentor.Source = "FilterButton.png";
+            imgUnselectedFilterButtonPitch.Source = "FilterButton.png";
+            imgFilterButtonFood.Source = "FilterButtonSelected.png";
+            imgFilterButtonAll.Source = "FilterButton.png";
         }
 
         private void ImgPitches_Tapped(object sender, EventArgs e)
         {
-            imgUnselectedFilterButton.Source = "FilterButtonSelected";
-            imgFilterButton.Source = "FilterButton";
+            imgUnselectedFilterButtonWorkshop.Source = "FilterButton.png";
+            imgUnselectedFilterButtonMentor.Source = "FilterButton.png";
+            imgUnselectedFilterButtonPitch.Source = "FilterButtonSelected.png";
+            imgFilterButtonFood.Source = "FilterButton.png";
+            imgFilterButtonAll.Source = "FilterButton.png";
+        }
+
+        private void ImgAlld_Tapped(object sender, EventArgs e)
+        {
+            imgUnselectedFilterButtonWorkshop.Source = "FilterButton.png";
+            imgUnselectedFilterButtonMentor.Source = "FilterButton.png";
+            imgUnselectedFilterButtonPitch.Source = "FilterButton.png";
+            imgFilterButtonFood.Source = "FilterButton.png";
+            imgFilterButtonAll.Source = "FilterButtonSelected.png";
+
         }
 
         private void BtnAgenda_Tapped(object sender, EventArgs e)
@@ -72,6 +108,8 @@ namespace HackATL_EEVM.Views.Pages
             grdFilterMenu.IsVisible = false;
             img1.Source = "AgendaSelected.png";
             grdMain.Children.Add(new DaysContentPage.PreView());
+
+           
         }
 
         private void BtnMyAgenda_Tapped(object sender, EventArgs e)
@@ -111,6 +149,15 @@ namespace HackATL_EEVM.Views.Pages
             textColor();
             lblFri.TextColor = Color.FromHex("#FE7061");
             grdMain.Children.Clear();
+            var agenda = img1.Source.ToString().Replace("File: ", "");
+            if (agenda == "AgendaSelected.png")
+            {
+                grdMain.Children.Add(new DaysContentPage.FridayView());
+            }
+            else
+            {
+                grdMain.Children.Add(new DaysContentPage.FridayView(true));
+            }
         }
 
         private void BtnSat_Tapped(object sender, EventArgs e)
@@ -118,6 +165,15 @@ namespace HackATL_EEVM.Views.Pages
             textColor();
             lblSat.TextColor = Color.FromHex("#FE7061");
             grdMain.Children.Clear();
+            //var agenda = img1.Source.ToString().Replace("File: ", "");
+            //if (agenda == "AgendaSelected.png")
+            //{
+            //    grdMain.Children.Add(new DaysContentPage.SatView(true));
+            //}
+            //else
+            //{
+            //    grdMain.Children.Add(new DaysContentPage.SatView(true));
+            //}
         }
 
         private void BtnSun_Tapped(object sender, EventArgs e)
@@ -134,5 +190,7 @@ namespace HackATL_EEVM.Views.Pages
             lblSat.TextColor = Color.Black;
             lblSun.TextColor = Color.Black;
         }
+
+        
     }
 }

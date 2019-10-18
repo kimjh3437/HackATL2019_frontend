@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HackATL_EEVM.Views.Master.RegisterPage"
-             xmlns:ext="clr-namespace:HackATL_EEVM.Extension">
+             xmlns:ext="clr-namespace:HackATL_EEVM.Extension"
+             NavigationPage.HasNavigationBar="False">
     <ScrollView VerticalScrollBarVisibility="Never">
 
         <Grid
@@ -21,8 +22,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+
             </Grid.RowDefinitions>
 
             <Image
@@ -60,16 +60,16 @@
                     <ext:ExtEntry
                         x:Name="txtEmail"
                         FontFamily="Gotham-Medium"
-                        HeightRequest="45"
-                        HorizontalOptions="FillAndExpand" />
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#FFF4BF"
+                        Keyboard ="Email"/>
 
-                    <BoxView
+                    <!--<BoxView
                         BackgroundColor="Black"
                         HeightRequest="0.8"
-                        HorizontalOptions="FillAndExpand" />
-
+                        HorizontalOptions="FillAndExpand" />-->
                 </StackLayout>
-
             </StackLayout>
 
             <StackLayout
@@ -81,7 +81,7 @@
                 VerticalOptions="CenterAndExpand">
 
                 <Label
-                    x:Name="lblPassword"
+                    x:Name="lblConfiPassword"
                     FontFamily="Gotham-Medium"
                     FontSize="14"
                     HorizontalOptions="FillAndExpand"
@@ -99,22 +99,59 @@
                     <ext:ExtEntry
                         x:Name="txtPassword"
                         FontFamily="Gotham-Medium"
-                        HeightRequest="45"
+                        HeightRequest="35"
                         HorizontalOptions="FillAndExpand"
-                        IsPassword="True" />
+                        IsPassword="True"
+                        BackgroundColor="#FFF4BF"/>
 
-                    <BoxView
+                    <!--<BoxView
                         BackgroundColor="Black"
                         HeightRequest="0.8"
-                        HorizontalOptions="FillAndExpand" />
-
-
+                        HorizontalOptions="FillAndExpand" />-->
                 </StackLayout>
+            </StackLayout>
 
+            <StackLayout
+                Grid.Row="3"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+                    x:Name="lblConfirmPassword"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Confirm Password"
+                    TextColor="Black" />
+
+                <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+                    <ext:ExtEntry
+                        x:Name="txtConfirmPassword"
+                        FontFamily="Gotham-Medium"
+                        HeightRequest="35"
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="True"
+                        BackgroundColor="#FFF4BF"/>
+
+                    <!--<BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.8"
+                        HorizontalOptions="FillAndExpand" />-->
+                </StackLayout>
             </StackLayout>
 
             <Image
-                Grid.Row="3"
+                Grid.Row="4"
                 Margin="0,20,0,0"
                 Aspect="AspectFit"
                 HeightRequest="45"
@@ -122,7 +159,7 @@
                 Source="SignUp2"
                 VerticalOptions="CenterAndExpand">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="imgSignUp"/>
+                    <TapGestureRecognizer x:Name="imgSignUp" Tapped="loginInfotapped"/>
                 </Image.GestureRecognizers>
             </Image>
 

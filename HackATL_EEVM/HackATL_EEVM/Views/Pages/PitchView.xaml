@@ -9,11 +9,29 @@
         <StackLayout Margin="30">
             <Image Source="AllInfo.png"/>
             <StackLayout Orientation="Vertical" Margin="30" Spacing="50">
-                <Image Source="JudgingRubric.png"/>
-                <Image Source="SubmitTeam.png"/>
-                <Image Source="SubmitPitch.png"/>
-                <Image Source="PitchTime.png"/>
-                <Image Source="LiveResult.png"/>
+                <Image Source="JudgingRubric.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="judgingRub" Tapped="JudgingRub_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                <Image Source="SubmitTeam.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="submitTeam" Tapped="SubmitTeam_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="SubmitPitch.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="submitPitch" Tapped="SubmitPitch_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="PitchTime.png">
+                    
+                </Image>
+                <Image Source="LiveResult.png">
+                    
+                </Image>
             </StackLayout>
 
         </StackLayout>

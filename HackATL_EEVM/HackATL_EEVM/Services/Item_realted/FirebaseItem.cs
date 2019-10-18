@@ -10,7 +10,7 @@ using HackATL_EEVM.Models;
 
 namespace HackATL_EEVM.Services.Item_realted
 {
-    public class FirebaseItem
+    public class FirebaseItem 
     {
         FirebaseClient firebase = new FirebaseClient("https://eevmhackatl.firebaseio.com/");
 

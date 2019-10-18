@@ -2,9 +2,63 @@
 <ContentView
     x:Class="HackATL_EEVM.Views.Pages.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ext="clr-namespace:HackATL_EEVM.Extension"
+    >
 
-    <StackLayout>
-        
-    </StackLayout>
+    <Grid
+            Margin="0"
+            Padding="25"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="10"
+            VerticalOptions="FillAndExpand">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image Source="AnnouncementBoard.png" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+
+        <StackLayout
+                Grid.Row="1"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="CenterAndExpand"
+                Spacing="5"
+                VerticalOptions="CenterAndExpand">
+
+            <Label
+                    x:Name="lblPush"
+                    FontFamily="Gotham-Medium"
+                    FontSize="14"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding pushes}"
+                    TextColor="Black" />
+
+            <StackLayout
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="0"
+                    WidthRequest="220">
+
+            </StackLayout>
+
+        </StackLayout>
+
+
+        <Image
+                Grid.Row="2"
+                Margin="0,0,0,30"
+                Aspect="AspectFit"
+                HeightRequest="300"
+                Source="MainLogo"
+                VerticalOptions="StartAndExpand" />
+
+
+    </Grid>
 </ContentView>

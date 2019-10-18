@@ -12,7 +12,8 @@
         Margin="0"
         Padding="0"
         RowSpacing="0"
-        VerticalOptions="FillAndExpand">
+        VerticalOptions="FillAndExpand"
+        >
         <Grid Padding="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
@@ -264,6 +265,9 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20" />
                     <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
                 </Grid.RowDefinitions>
 
                 <Grid
@@ -277,12 +281,45 @@
                     </Grid.ColumnDefinitions>
 
                     <Image
-                        x:Name="imgFilterButton"
+                        x:Name="imgFilterButtonAll"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="FilterButton.png" />
 
                     <Label
+                        x:Name="All"
+                        Grid.Column="1"
+                        FontFamily="Gotham-Book"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="All"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgAlld" Tapped="ImgAlld_Tapped" />
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+                
+                <Grid
+                    Grid.Row="1"
+                    Margin="0"
+                    Padding="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        x:Name="imgFilterButtonFood"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="FilterButton.png" />
+
+                    <Label
+                        x:Name="FoodFilter"
                         Grid.Column="1"
                         FontFamily="Gotham-Book"
                         FontSize="16"
@@ -298,7 +335,7 @@
                 </Grid>
 
                 <Grid
-                    Grid.Row="1"
+                    Grid.Row="2"
                     Margin="0"
                     Padding="0">
 
@@ -308,12 +345,13 @@
                     </Grid.ColumnDefinitions>
 
                     <Image
-                        x:Name="imgUnselectedFilterButton"
+                        x:Name="imgUnselectedFilterButtonPitch"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="FilterButton.png" />
 
                     <Label
+                        x:Name="PitchesFilter"
                         Grid.Column="1"
                         FontFamily="Gotham-Book"
                         FontSize="16"
@@ -327,6 +365,72 @@
                     </Grid.GestureRecognizers>
 
                 </Grid>
+
+                <Grid
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        x:Name="imgUnselectedFilterButtonWorkshop"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="FilterButton.png" />
+
+                    <Label
+                        x:Name="WorkshopFilter"
+                        Grid.Column="1"
+                        FontFamily="Gotham-Book"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Workshop"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgWorkshop" Tapped="ImgWorkshop_Tapped" />
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+                <Grid
+                    Grid.Row="4"
+                    Margin="0"
+                    Padding="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        x:Name="imgUnselectedFilterButtonMentor"
+                        Grid.Column="0"
+                        Aspect="AspectFit"
+                        Source="FilterButton.png" />
+
+                    <Label
+                        x:Name="MentorSessionFilter"
+                        Grid.Column="1"
+                        FontFamily="Gotham-Book"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Mentors"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgMentors" Tapped="ImgMentors_Tapped" />
+                    </Grid.GestureRecognizers>
+
+                </Grid>
+
+
 
             </Grid>
 

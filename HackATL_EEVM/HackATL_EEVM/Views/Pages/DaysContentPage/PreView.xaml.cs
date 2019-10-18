@@ -1,5 +1,6 @@
 ﻿using HackATL_EEVM.Models;
 using HackATL_EEVM.Utilities;
+using HackATL_EEVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace HackATL_EEVM.Views.Pages.DaysContentPage
     public partial class PreView : ContentView
     {
         List<TypesModel> typesModels = new List<TypesModel>();
+        List<TypesModel> mytypesModels = new List<TypesModel>();
         bool _isAgenda = false;
         public PreView()
         {
@@ -33,9 +35,9 @@ namespace HackATL_EEVM.Views.Pages.DaysContentPage
         public void BindData()
         {
             typesModels.Clear();
-            typesModels.Add(new TypesModel() { id = 1, Time = "5:00 PM", status = "Check-In", Desc = "Goizueta Business School Arches" });
-            typesModels.Add(new TypesModel() { id = 2, Time = "10:00 PM", status = "Check-In", Desc = "Goizueta Business School Arches" });
-            typesModels.Add(new TypesModel() { id = 3, Time = "3:00 PM", status = "Check-In", Desc = "Goizueta Business School Arches" });
+            typesModels.Add(new TypesModel() { id = 1, Time = "5:00 PM", status = "Check-In", Desc = "Goizuetapre Business School Arches" });
+            typesModels.Add(new TypesModel() { id = 2, Time = "10:00 PM", status = "Check-In", Desc = "Goizuetapree Business School Arches" });
+            typesModels.Add(new TypesModel() { id = 3, Time = "3:00 PM", status = "Check-In", Desc = "Goizuetapreee Business School Arches" });
 
             flvTypes.FlowItemsSource = typesModels.ToList();
         }
@@ -43,7 +45,7 @@ namespace HackATL_EEVM.Views.Pages.DaysContentPage
         public void BindAgendaData()
         {
             typesModels.Clear();
-            typesModels = Common.typesModel.ToList();
+            typesModels = Common.mytypesModel.ToList();
             flvTypes.FlowItemsSource = typesModels.ToList();
         }
 
@@ -73,7 +75,7 @@ namespace HackATL_EEVM.Views.Pages.DaysContentPage
                     }
                 }
 
-                Common.typesModel.Add(mImages);
+                Common.mytypesModel.Add(mImages);
             }
         }
 
@@ -103,10 +105,30 @@ namespace HackATL_EEVM.Views.Pages.DaysContentPage
                 }
             }
         }
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            var item = args.SelectedItem as Item;
+            if (item == null)
+                return;
+
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            flvTypes.SelectedItem = null;
+
+        }
 
         private void FlvTypes_FlowItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Type = e.Item;
+        }
+
+        private void FlvTypes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as TypesModel;
+            if (item == null)
+                return;
+            
+
+
         }
     }
 }

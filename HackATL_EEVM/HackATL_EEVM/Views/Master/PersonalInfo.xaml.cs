@@ -16,5 +16,15 @@ namespace HackATL_EEVM.Views.Master
         {
             InitializeComponent();
         }
+        public async void loginInfotapped(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        async void finalsignup2_Tabbed(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainTab());
+
+        }
     }
 }

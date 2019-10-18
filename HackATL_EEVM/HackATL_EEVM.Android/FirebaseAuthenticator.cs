@@ -34,7 +34,7 @@ namespace HackATL_EEVM.Droid
                 return "";
             }
         }
-        public bool SignUp(string name, string email, string password)
+        public bool SignUp(string email, string password)
         {
             try
             {

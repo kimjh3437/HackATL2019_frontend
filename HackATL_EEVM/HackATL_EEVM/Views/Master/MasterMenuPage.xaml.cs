@@ -26,17 +26,13 @@ namespace HackATL_EEVM.Views.Master
 
         
         private void viewProfileTapped(object sender, EventArgs e)
-        {
+        {          
            
                 var page = new Xamarin.Forms.NavigationPage(new ProfileView());
-                Utilities.Common.MasterPage.Detail = page;
-                Xamarin.Forms.NavigationPage.SetHasNavigationBar(page,true);
-                Xamarin.Forms.NavigationPage.SetHasBackButton(page, true);
+                Utilities.Common.MasterPage.Master = page;
+                Xamarin.Forms.NavigationPage.SetHasNavigationBar(page,false);
                 Utilities.Common.MasterPage.IsPresented = false;
-
-
-           
-            
+   
         }
     }
 }

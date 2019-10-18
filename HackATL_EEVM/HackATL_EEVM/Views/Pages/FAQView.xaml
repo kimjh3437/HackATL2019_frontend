@@ -4,16 +4,38 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HackATL_EEVM.Views.Pages.FAQView">
+             x:Class="HackATL_EEVM.Views.Pages.FAQView"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
   <ContentView.Content>
         <StackLayout Margin="15" Spacing="20">
             <Image Source="QuestionsAbout" Margin="25" HeightRequest="15" WidthRequest="75"/>
             <StackLayout Spacing="35" Margin="45">
-                <Image Source="BeforeArrive"/>
-                <Image Source="WhenArrive.png"/>
-                <Image Source="PitchingFAQ.png"/>
-                <Image Source="FoodFAQ.png"/>
-                <Image Source="OthersFAQ.png"/>
+                <Image Source="BeforeArrive">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="beforeArrive" Tapped="BeforeArrive_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="WhenArrive.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="whenArrive" Tapped="WhenArrive_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="PitchingFAQ.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="pitchingFAQ" Tapped="PitchingFAQ_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                
+                <Image Source="FoodFAQ.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="recommendedTools" Tapped="RecommendedTools_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                    
+
+               
+                
 
 
             </StackLayout>

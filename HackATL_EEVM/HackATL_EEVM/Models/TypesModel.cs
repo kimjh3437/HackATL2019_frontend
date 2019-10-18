@@ -9,8 +9,11 @@ namespace HackATL_EEVM.Models
     {
         public int id { get; set; }
         public string Time { get; set; }
-        public string status { get; set; }
-        public string Desc { get; set; }
+        public string status { get; set; } //name
+        public string Desc { get; set; } //location
+        public string Description { get; set; }  //description
+        public string category { get; set; } //type
+        public string day { get; set; }
 
         private string _IsAddImage = "Add.png";
         public string IsAddImage

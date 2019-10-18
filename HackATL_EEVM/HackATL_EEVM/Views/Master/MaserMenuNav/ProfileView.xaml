@@ -4,12 +4,35 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HackATL_EEVM.Views.Master.MaserMenuNav.ProfileView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="HackATL_EEVM.Views.Master.MaserMenuNav.ProfileView"
+             NavigationPage.HasBackButton="True">
+    <Grid
+            Margin="0"
+            Padding="15"
+            RowSpacing="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image
+                Grid.Row="0"
+                Aspect="AspectFit"
+                HeightRequest="15"
+                HorizontalOptions="EndAndExpand"
+                Source="Exit.png"
+                VerticalOptions="CenterAndExpand">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer x:Name="imgExit" Tapped="ImgExit_Tapped" />
+            </Image.GestureRecognizers>
+        </Image>
+
+    </Grid>
+
 </ContentPage>

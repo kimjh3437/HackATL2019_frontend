@@ -10,8 +10,7 @@
     
     <StackLayout>
        
-        <ListView x:Name="ItemsListViewFRI"
-                
+        <ListView x:Name="ItemsListViewFRI"                
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
                 RefreshCommand="{Binding LoadItemsCommand}"
@@ -69,9 +68,6 @@
                                         HeightRequest="35"
                                         WidthRequest="35"/>
                                 </StackLayout>
-
-                                
-
                             </StackLayout>
 
 

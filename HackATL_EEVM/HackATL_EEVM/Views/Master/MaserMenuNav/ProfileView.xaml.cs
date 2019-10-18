@@ -15,10 +15,17 @@ namespace HackATL_EEVM.Views.Master.MaserMenuNav
         public ProfileView()
         {
             InitializeComponent();
+            
         }
         async void viewProfileTapped(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+            
         }
+        private void ImgExit_Tapped(object sender, EventArgs e)
+        {
+            Utilities.Common.MasterPage.IsPresented = false;
+        }
+
     }
 }
